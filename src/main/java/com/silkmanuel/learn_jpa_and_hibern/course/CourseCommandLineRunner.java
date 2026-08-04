@@ -1,11 +1,9 @@
-package com.silkmanuel.learn_jpa_and_hibern.course.jbc;
+package com.silkmanuel.learn_jpa_and_hibern.course;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.silkmanuel.learn_jpa_and_hibern.course.Course;
-import com.silkmanuel.learn_jpa_and_hibern.course.CourseJdbcRepository;
 import com.silkmanuel.learn_jpa_and_hibern.course.jpa.CourseJpaRepository;
 import com.silkmanuel.learn_jpa_and_hibern.course.spring_data_jpa.CourseSpringDataJpaRepository;
 
@@ -29,6 +27,14 @@ public class CourseCommandLineRunner implements CommandLineRunner {
         System.out.println(repository.findById(1l));
         System.out.println(repository.findById(2l));
         System.out.println(repository.findById(3l));
+        System.out.println(repository.findAll());
+        System.out.println(repository.count()); 
+
+        System.out.println(repository.findByAuthor("silkmanuel"));
+        System.out.println(repository.findByAuthor(""));
+        System.out.println(repository.findByName("Learn GCP"));
+        System.out.println(repository.findByName("Learn AWS"));
+        System.out.println(repository.findByName("Learn Azure"));   
     }
     
 }

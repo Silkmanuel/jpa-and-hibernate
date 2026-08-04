@@ -1,4 +1,4 @@
-package com.silkmanuel.learn_jpa_and_hibern.course;
+package com.silkmanuel.learn_jpa_and_hibern.course.jbc;
 
 import java.util.List;
 
@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
+import com.silkmanuel.learn_jpa_and_hibern.course.Course;
 
 @Repository
 public class CourseJdbcRepository {
